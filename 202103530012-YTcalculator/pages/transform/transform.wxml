@@ -1,0 +1,30 @@
+<view class='content'>
+  <!-- <view class='screen'>{{result}}</view> -->
+  <view class='screen'>
+    <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        当前选择：{{picker[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='screensec'>
+    <input bindinput="base_input" value="{{base}}" placeholder="请输入需要转换进制的内容..."></input>
+  </view>
+  <view class='base'>二进制</view>
+  <view class='screensec'>
+    <input value="{{B}}" disabled  data-base="B" bindtap="copy_text"></input>
+  </view>
+  <view class='base'>八进制</view>
+  <view class='screensec'>
+    <input value="{{O}}" disabled data-base="O" bindtap="copy_text"></input>
+  </view>
+  <view class='base'>十进制</view>
+  <view class='screensec'>
+  <input value="{{D}}" disabled data-base="D" bindtap="copy_text"></input>
+  </view>
+  <view class='base'>十六进制</view>
+  <view class='screensec'>
+  <input value="{{H}}" disabled data-base="H" bindtap="copy_text"></input>
+  </view>
+  <view class='histext'>点击可以复制内容</view>
+</view>
